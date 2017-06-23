@@ -1,19 +1,515 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="Icon" href="./images/dora1.ico" />
     <title>Live for faith</title>
-    <!--引入CSS样式文件包-->
-    <!--引入JS文件包-->
-    <script type="text/javascript" src="./lib/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="./lib/angular.min.js"></script>
-    <script type="text/javascript" src="./lib/angular-route.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" href="images/icon.ico" />
+    <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="http://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="css/font-awesome.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/dora.css" />
 </head>
 
+
 <body>
-    欢迎来到我的世界!
+    <div class="agileits_main">
+        <!-- header -->
+        <div class="w3_agile_logo">
+            <h1 class="text-center"><a href="index.html">@Live for faith</a></h1>
+            <div id="me"></div>
+
+        </div>
+        <!-- banner -->
+        <div class="w3_banner">
+            <div class="container">
+                <div class="slider">
+                    <div class="callbacks_container">
+                        <ul class="rslides callbacks callbacks1" id="slider4">
+                            <li>
+                                <div class="banner_text_w3layouts">
+                                    <h3>不忘初心，勿忘心安、</h3>
+                                    <span> </span>
+                                    <p>Keep your mind and to be yourself.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner_text_w3layouts">
+                                    <h3>Life without a friend is death.</h3>
+                                    <span> </span>
+                                    <p>没有朋友，虽生犹死、 </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner_text_w3layouts">
+                                    <h3>我命由我，不由天！</h3>
+                                    <span> </span>
+                                    <p>Don't believe fate.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <script src="js/responsiveslides.min.js"></script>
+                    <script>
+                        // You can also use "$(window).load(function() {"
+                        $(function() {
+                            // Slideshow 4
+                            $("#slider4").responsiveSlides({
+                                auto: true,
+                                pager: true,
+                                nav: true,
+                                speed: 500,
+                                namespace: "callbacks",
+                                before: function() {
+                                    $('.events').append("<li>before event fired.</li>");
+                                },
+                                after: function() {
+                                    $('.events').append("<li>after event fired.</li>");
+                                }
+                            });
+
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <!-- menu -->
+        <nav class="navbar navbar-inverse ">
+            <div class="container">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+		</button>
+                <div class="collapse navbar-collapse top-nav w3l" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav linkEffects linkHoverEffect_11 custom-menu">
+                        <li><a href="#top"><span>兴趣</span></a></li>
+                        <li><a href="#about" class="scroll"><span>简介</span></a></li>
+                        <li><a href="#gallery" class="scroll"><span>生活 </span></a></li>
+                        <li><a href="#team" class="scroll"><span>团队</span></a></li>
+                        <li><a href="#contact" class="scroll"><span>联系</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- //menu -->
+    </div>
+    <!-- home -->
+    <div class="home_ w3layouts">
+        <div class="home_grids_w3">
+            <div class="home_main">
+                <div class="col-md-7 col-sm-7 col-xs-7 img1 img-grid">
+                    <div class="img_text_w3ls text-center">
+                        <h4>英雄联盟</h4>
+                        <span> </span>
+                        <p>No brothers,No game!</p>
+                    </div>
+                </div>
+                <div class="col-md-5 img2 col-sm-5 col-xs-5 img-grid">
+                    <div class="img_text_w3ls text-center">
+                        <h4>Movie</h4>
+                        <span> </span>
+                        <p>每个人的一生就像一部电影，而他们就是电影里的英雄。 </p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="home_main">
+                <div class="col-md-5 col-sm-5 col-xs-5 img3 img-grid ">
+                    <div class="img_text_w3ls text-center">
+                        <h4>Music</h4>
+                        <span> </span>
+                        <p>Rap是一种态度。</p>
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-7 col-xs-7 img4 img-grid">
+                    <div class="img_text_w3ls text-center">
+                        <h4>街舞</h4>
+                        <span> </span>
+                        <p>Keep moving!</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="home_main">
+                <div class="col-md-7 col-sm-7 col-xs-7 img-grid  img5">
+                    <div class="img_text_w3ls text-center">
+                        <h4>旅游</h4>
+                        <span> </span>
+                        <p>世界那么大，我想和你去看看</p>
+                    </div>
+                </div>
+                <div class="col-md-5 col-sm-5 col-xs-5 img-grid img6">
+                    <div class="img_text_w3ls text-center">
+                        <h4>萌宠</h4>
+                        <span> </span>
+                        <p>狗狗是人类最好的朋友！</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!-- about -->
+    <div class="about_agileinfo" id="about">
+        <div class="container">
+            <h3 class="title">个人简介</h3>
+            <div class="about_main">
+                <div class="col-md-6 col-sm-6 col-xs-6 about_agileits">
+                    <!-- 哆啦A梦 -->
+                    <div class="doa">
+
+                        <!-- 头 -->
+
+                        <div class="head">
+                            <div class="face">
+                                <div class="eyes eye-left">
+                                    <div class="eye-black"></div>
+                                </div>
+                                <div class="eyes eye-right">
+                                    <div class="eye-black"></div>
+                                </div>
+                            </div>
+                            <div class="nose"></div>
+                            <div class="nose-line"></div>
+                        </div>
+
+                        <!-- 嘴 -->
+
+                        <div class="box">
+                            <div class="mouth"></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+
+                        <!-- 脖 -->
+
+                        <div class="neck">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                        <!-- 胡须 -->
+
+                        <div class="beard">
+                            <div class="left">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="right">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 about_text_w3l">
+                    <h4>马 守龙</h4>
+                    <P id="jianjie">毕业于：武汉华中科技大学<br> 就职于：国家安全情报局
+                        <br> 职业技能：精通HTML/CSS/javascript,熟练使用多种前端框架,参与过京东商城、百度外卖等项目的开发。
+                        <br> 个人小目标：先赚他一个亿。
+                    </P>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="gallery_wthree" id="gallery">
+        <div class="container">
+            <h3 class="title">生活</h3>
+            <div class="gallery_grid agileits_w3layouts">
+                <div class="col-md-6  col-sm-6 col-xs-6 grid_w3">
+                    <div class="grid-1">
+                        <a class="cm-overlay" href="images/school5.jpg">
+                            <img src="images/school5.jpg" alt=" " class="img-responsive" />
+                            <div class="w3agile-text w3agile-text-smal1">
+                                <h5>HUST</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="sub_grid gallery_w3l">
+                        <div class="col-md-6 col-sm-6 col-xs-6 grid-1 grid-c grid_w3l">
+                            <a class="cm-overlay" href="images/school6.jpg">
+                                <img src="images/school6.jpg" alt=" " class="img-responsive" />
+                                <div class="w3agile-text w3agile-text-small">
+                                    <h5>法国梧桐</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 grid-1 grid-b grid_w3l">
+                            <a class="cm-overlay" href="images/4years1ball.jpg">
+                                <img src="images/4years1ball.jpg" alt=" " class="img-responsive" />
+                                <div class="w3agile-text w3agile-text-smal1">
+                                    <h5>4 years 1 ball</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 grid_w3">
+                    <div class="sub_grid">
+                        <div class="col-md-6 col-sm-6 col-xs-6 grid-1 grid-c grid_w3l">
+                            <a class="cm-overlay" href="images/15.jpg">
+                                <img src="images/15.jpg" alt=" " class="img-responsive" />
+                                <div class="w3agile-text w3agile-text-small">
+                                    <h5>LOL</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-xs-6 grid-1 grid-d grid_w3l">
+                            <a class="cm-overlay" href="images/school4.jpg">
+                                <img src="images/school4.jpg" alt=" " class="img-responsive" />
+                                <div class="w3agile-text w3agile-text-smal1">
+                                    <h5>沁苑十一栋</h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="grid-1 grid-2">
+                        <a class="cm-overlay" href="images/school3.jpg">
+                            <img src="images/school3.jpg" alt=" " class="img-responsive" />
+                            <div class="w3agile-text w3agile-text-smal1">
+                                <h5>亚洲第一大教学楼——东九楼</h5>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="tooltip-content">
+        <div class="modal fade features-modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-md">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h2 class="modal-title text-center">来找我开黑吧</h2>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/leesin.jpg" alt="image">
+                        <p>专注打野二十年，专注抢人头，花式卖队友，来找我开车吧！<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;雷瑟守备：八区第一皮皮瞎</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w3layouts-section" id="blog">
+        <div class="container">
+            <h3 class="title">盲僧职业玩家</h3>
+            <p>精通各种反野，反蹲，无限gank，强行带节奏，哪里有人头，哪里就有我。</p>
+            <a href="#myModal" class="agilebtn" data-toggle="modal" data-target="#myModal"><span>了解详情&nbsp;&gt;</span></a>
+        </div>
+    </div>
+    <div class="team agileits-w3layouts" id="team">
+        <div class="container">
+            <h3 class="title">我的伙伴</h3>
+            <div class="team-w3ls">
+                <div class="col-md-3 col-sm-3 col-xs-3 team-grid w3_agileits">
+                    <img class="img-w3l t1-wthree img-responsive" src="images/t1.jpg" alt="">
+                    <h5>李 晨瑶</h5>
+                    <p>热衷街舞的耿直河南boy，从同事到同学，我亲眼见证他六块腹肌变成一块。单身、有点gay倾向。</p>
+                    <div class="social-icons">
+                        <ul>
+                            <li>
+                                <a href="#" class="fa fa-facebook icon icon-border facebook"> </a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter icon icon-border twitter"> </a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-google-plus icon icon-border googleplus"> </a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3 team-grid w3_agileits t2">
+                    <img class="img-w3l t1-wthree img-responsive" src="images/t2.jpg" alt="">
+                    <h5>曹 启文</h5>
+                    <p>拍huang片专业人士，多年从业经验带我们随便飙车，来到黑马体重也是一路飙升，现已前凸后翘，有望突破C杯。</p>
+                    <div class="social-icons">
+                        <ul>
+                            <li>
+                                <a href="#" class="fa fa-facebook icon icon-border facebook"> </a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter icon icon-border twitter"> </a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-google-plus icon icon-border googleplus"> </a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3 w3_agileits team-grid">
+                    <img class="img-w3l t1-wthree img-responsive" src="images/t3.jpg" alt="">
+                    <h5>刘 晓璐</h5>
+                    <p>学霸一枚，撸码狂魔，绝对潜力股。至今单身，性取向正常，有意者请私聊。</p>
+                    <div class="social-icons agile">
+                        <ul>
+                            <li>
+                                <a href="#" class="fa fa-facebook icon icon-border facebook"> </a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter icon icon-border twitter"> </a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-google-plus icon icon-border googleplus"> </a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3 w3_agileits team-grid">
+                    <img class="img-w3l t1-wthree img-responsive" src="images/t4.jpg" alt="">
+                    <h5>陈 庆</h5>
+                    <p>我们宿舍的内裤狂魔，据说已经是某妹纸的未婚夫，厉害了，老铁~</p>
+                    <div class="social-icons agile">
+                        <ul>
+                            <li>
+                                <a href="#" class="fa fa-facebook icon icon-border facebook"> </a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter icon icon-border twitter"> </a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-google-plus icon icon-border googleplus"> </a>
+                            </li>
+                        </ul>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-w3-agileits" id="contact">
+        <div class="contact-main">
+            <div class="col-md-7 col-sm-7 col-xs-7 contact-right-w3l">
+                <form action="#" method="post">
+                    <input type="text" class="name" name="name" placeholder="姓名" required="">
+                    <input type="text" class="name" name="name" placeholder="性别" required="">
+                    <input type="email" class="name" name="name" placeholder="邮箱" required="">
+                    <input type="text" class="name" name="name" placeholder="其它联系方式" required="">
+                    <textarea placeholder="主人不在，可以留言给他哦（づ￣3￣）づ" required=""></textarea>
+                    <input type="submit" value="发送留言">
+                </form>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-5 contact-left-w3ls">
+                <div class="mail contact-grid-agileinfo">
+                    <div class="col-md-1 col-sm-2 col-xs-2 contact-icon-wthree">
+                        <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-md-11 col-sm-9 col-xs-9 contact-text-agileinfo">
+                        <h4>发邮件给我</h4>
+                        <p><a href="m13058119947@163.com">m13058119947@163.com</a></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="call contact-grid-agileinfo">
+                    <div class="col-md-1 col-sm-2 col-xs-2 contact-icon-wthree">
+                        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-md-11 col-sm-9 col-xs-9 contact-text-agileinfo">
+                        <h4>联系我</h4>
+                        <p>+13058119947</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="visit contact-grid-agileinfo">
+                    <div class="col-md-1 col-sm-2 col-xs-2 contact-icon-wthree">
+                        <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                    </div>
+                    <div class="col-md-11 col-sm-9  col-xs-9 contact-text-agileinfo">
+                        <h4>联系我们</h4>
+                        <p>深圳-宝安区-新安街道-东兴公寓</p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="subscribe w3_agile">
+        <div class="container">
+            <h3 class="title text-center">站内搜索</h3>
+            <div class="subscribe-wthree">
+                <form action="#" method="post">
+                    <input type="email" placeholder="输入内容" required="">
+                    <input type="submit" value="搜索" class="botton">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copy-right agileits-w3layouts">
+        <div class="container">
+            <div class="social-icons agileits">
+                <ul>
+                    <li>
+                        <a href="#" class="fa fa-facebook icon icon-border facebook"> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-twitter icon icon-border twitter"> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-google-plus icon icon-border googleplus"> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="fa fa-dribbble icon icon-border dribbble"> </a>
+                    </li>
+                </ul>
+                <div class="clearfix"> </div>
+            </div>
+            <p>传智播客-黑马程序员-深圳校区移动与前端开发6期</p>
+        </div>
+    </div>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/jquery.cm-overlay.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.cm-overlay').cmOverlay();
+        });
+    </script>
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
+
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <script src="js/SmoothScroll.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
 </body>
 
 </html>
